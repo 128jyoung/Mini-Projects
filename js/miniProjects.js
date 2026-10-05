@@ -15,4 +15,21 @@ console.log("Total amount due: " + totalBill.toFixed(2));
 let hoursWorked=167.5;
 let hourlyRate=4.25
 let grossPay=hoursWorked*hourlyRate;
-console.log("Gross Pay: " + grossPay.toFixed(2))
+console.log("Gross Pay: " + grossPay.toFixed(2));
+
+//GRADE CALCULATOR
+
+let pointsEarned=19;
+let totalPoints=20;
+let grade=pointsEarned/totalPoints;
+let percentageGrade=grade*100;
+console.log("Grade: " + percentageGrade+"%");
+
+//GAS COST CALCULATOR
+
+let totalDistance=300;
+let fuelEfficiency=29;
+let gasPrice=4.31;
+let gallonsUsed=totalDistance/fuelEfficiency;
+let totalCost=gallonsUsed*gasPrice;
+console.log("Gas Cost: " + totalCost.toFixed(2));
