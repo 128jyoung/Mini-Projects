@@ -3,7 +3,7 @@ let tipOutput = document.getElementById('tipAmountOutput');
 let totalOutput = document.getElementById('totalBillOutput');
 let checkOutput = document.getElementById('paycheckAmountOutput');
 let gradeOutput = document.getElementById('percentGradeOutput');
-let gasOutput = document.getElementById('gasCostOutput');
+let diceOutput = document.getElementById('diceOutput');
 
 
 let tipBtn = document.getElementById("tipButton");
@@ -77,30 +77,29 @@ gradeBtn.addEventListener('click', function () {
 })
 
 
-let gasBtn = document.getElementById("gasButton");
-gasBtn.addEventListener('click', function () {
+let dieBtn = document.getElementById("diceButton");
+dieBtn.addEventListener('click', function () {
 
 
-    // Gas Cost Calculator Variables
-    let tankGallons = document.getElementById('tankGallonsInput').valueAsNumber;
-    let perGallon = document.getElementById('perGallonInput').valueAsNumber;
-    let gasCost;
+    // Dice Roll Variables
+    let numberRolled;
 
 
     // Do the math
-    gasCost = tankGallons * perGallon;
+    //Multiply by 6 because there are 6 sides to a die
+    //adding 1 because you can't roll a zero!
+    numberRolled=Math.floor(Math.random()*6+1);//adding 1 because you can't roll a zero!
 
 
-    // Only show 2 decimal places
-    gasCost = gasCost.toFixed(2);
+    //Math.floor rounds our random number down to a whole number
+    
 
 
     // Show the output
-    gasOutput.innerHTML = "$" + gasCost;
+    diceOutput.innerHTML = numberRolled;
 
 
 })
-
 
 
 
