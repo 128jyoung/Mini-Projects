@@ -4,7 +4,7 @@ let totalOutput = document.getElementById('totalBillOutput');
 let checkOutput = document.getElementById('paycheckAmountOutput');
 let gradeOutput = document.getElementById('percentGradeOutput');
 let diceOutput = document.getElementById('diceOutput');
-
+let usernameOutput = document.getElementById('usernameOutput');
 
 let tipBtn = document.getElementById("tipButton");
 tipBtn.addEventListener('click', function () {
@@ -88,15 +88,39 @@ dieBtn.addEventListener('click', function () {
     // Do the math
     //Multiply by 6 because there are 6 sides to a die
     //adding 1 because you can't roll a zero!
-    numberRolled=Math.floor(Math.random()*6+1);//adding 1 because you can't roll a zero!
+    numberRolled = Math.floor(Math.random() * 6 + 1);//adding 1 because you can't roll a zero!
 
 
     //Math.floor rounds our random number down to a whole number
-    
+
 
 
     // Show the output
     diceOutput.innerHTML = numberRolled;
+
+
+})
+let usernameBtn = document.getElementById("usernameButton");
+usernameBtn.addEventListener('click', function () {
+    // Grade Calculator Variables
+    let firstName = document.getElementById('firstNameInput').value;
+    let favoriteGame = document.getElementById('favoriteGameInput').value;
+    let number;
+    let username;
+
+
+    number = Math.random() * 370 + 1
+    number = Math.floor(number);
+
+    // Do the math
+    username = firstName + favoriteGame + number;
+
+
+
+
+
+    // Show the output
+    usernameOutput.innerHTML = username;
 
 
 })
